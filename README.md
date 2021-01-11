@@ -1,4 +1,4 @@
-# Derek's Resume, built with React
+# Resume website, built with React
 
 
 ## Implementation Highlights
