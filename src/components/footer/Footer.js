@@ -19,7 +19,7 @@ export default class Footer extends Component {
             {/* <li><a href="derektquinn"><i className="fa fa-skype" /></a></li> */}
           </ul>
           <ul className="copyright">
-            <li>© Copyright 2020</li>
+            <li>© Copyright 2021 | Derek Quinn</li>
 
           </ul>
         </div>
