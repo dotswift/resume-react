@@ -26,7 +26,7 @@ export default class Header extends Component {
       {/* <li><a className="smoothscroll" href="#contact">Contact</a></li> */}
     </ul> {/* end #nav */}
   </nav> {/* end #nav-wrap */}
-  <div className="row banner">
+  {/* <div className="row banner">
     <div className="banner-text">
       <h1 className="responsive-headline">Jonathan Doe.</h1>
       <h3>I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
@@ -46,7 +46,7 @@ export default class Header extends Component {
   </div>
   <p className="scrolldown">
     <a className="smoothscroll" href="#about"><i className="icon-down-circle" /></a>
-  </p>
+  </p> */}
 </header> {/* Header End */}
       </React.Fragment>
     );
