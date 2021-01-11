@@ -27,9 +27,6 @@ export default class Header extends Component {
     </ul> {/* end #nav */}
   </nav> {/* end #nav-wrap */}
 
-  <p className="scrolldown">
-    <a className="smoothscroll" href="#about"><i className="icon-down-circle" /></a>
-  </p>
 </header> {/* Header End */}
       </React.Fragment>
     );
