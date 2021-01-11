@@ -25,7 +25,7 @@ export default class About extends Component {
                   Mountain View, CA 94043 US
                 </span><br /> */}
                 <span>+1.330.232.3028</span><br />
-                <span>d.quinn@mac.com</span>
+                <span>hello@derekquinn.com</span>
               </p>
             </div>
             <div className="columns download">
