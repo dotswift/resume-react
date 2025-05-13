@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import ProjectShowcase from './ProjectShowcase';
+import ScrambleIn, { ScrambleInHandle } from "./fancy/components/text/scramble-in";
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('about');
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const scrambleRef = useRef<ScrambleInHandle | null>(null);
 
   // Apply dark theme on mount
   useEffect(() => {
@@ -35,6 +37,10 @@ const App: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [activeSection]);
+
+  useEffect(() => {
+    scrambleRef.current?.start();
+  }, []);
 
   // Resume data
   const resumeData = {
@@ -194,7 +200,15 @@ const App: React.FC = () => {
         <section className="hero-section">
           <div className="container">
             <div className="hero-content">
-              <h1>Hi, I'm {resumeData.name.split('"')[0]} <span className="accent">"{resumeData.name.split('"')[1]}"</span> {resumeData.name.split('"')[2]}</h1>
+              <h1>
+                <ScrambleIn
+                  ref={scrambleRef}
+                  text={`Hi, I'm Derek Quinn, AKA dereq`}
+                  scrambleSpeed={100}
+                  scrambledLetterCount={22}
+                  autoStart={false}
+                />
+              </h1>
               <h2>{resumeData.title}</h2>
               <p className="hero-description">{resumeData.profile}</p>
               <div className="hero-cta">
