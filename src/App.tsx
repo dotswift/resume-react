@@ -1,26 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ProjectShowcase from './ProjectShowcase';
-import ThemeToggle from './ThemeToggle';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('about');
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
-  // Handle dark mode toggle
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  // Apply theme class to body
+  // Apply dark theme on mount
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark-theme');
-    } else {
-      document.body.classList.remove('dark-theme');
-    }
-  }, [isDarkMode]);
+    document.body.classList.add('dark-theme');
+  }, []);
 
   // Handle scroll events for navigation highlighting
   useEffect(() => {
@@ -396,9 +385,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      {/* Theme Toggle */}
-      <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
     </div>
   );
 };
