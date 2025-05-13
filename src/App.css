@@ -282,8 +282,12 @@ body {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "languages frameworks"
+    "tools tools";
   gap: 2rem;
+  max-width: 100%;
 }
 
 .skill-category {
@@ -310,6 +314,20 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
+}
+
+.skill-category:nth-child(1) { grid-area: languages; }
+.skill-category:nth-child(2) { grid-area: frameworks; }
+.skill-category:nth-child(3) { grid-area: tools; }
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "languages"
+      "frameworks"
+      "tools";
+  }
 }
 
 /* Contact Section */
@@ -378,7 +396,7 @@ body {
   border: 1px solid var(--light-gray);
   border-radius: 5px;
   background: var(--bg-color);
-  color: var(--text-color);
+  color: var (--text-color);
 }
 
 .form-group input:focus,
