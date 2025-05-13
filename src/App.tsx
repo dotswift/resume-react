@@ -282,57 +282,63 @@ const App: React.FC = () => {
             <div className="skills-container">
               <div className="skill-category">
                 <h3>Programming Languages</h3>
-                <Gravity gravity={{ x: 0, y: 1 }} className="relative w-full h-[300px]">
-                  {resumeData.skills.languages.map((language, index) => (
-                    <MatterBody
-                      key={index}
-                      matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
-                      x={`${20 + (index * 15)}%`}
-                      y={`${10 + (index % 3) * 10}%`}
-                      angle={Math.random() * 20 - 10}
-                    >
-                      <div className="text-base sm:text-lg md:text-xl bg-primary text-white rounded-full hover:cursor-grab px-6 py-2">
-                        {language}
-                      </div>
-                    </MatterBody>
-                  ))}
-                </Gravity>
+                <div className="gravity-container relative h-[300px]">
+                  <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
+                    {resumeData.skills.languages.map((language, index) => (
+                      <MatterBody
+                        key={index}
+                        matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
+                        x={`${20 + (index * 15)}%`}
+                        y={`${10 + (index % 3) * 10}%`}
+                        angle={Math.random() * 20 - 10}
+                      >
+                        <div className="text-base sm:text-lg md:text-xl bg-primary text-white rounded-full hover:cursor-grab px-6 py-2">
+                          {language}
+                        </div>
+                      </MatterBody>
+                    ))}
+                  </Gravity>
+                </div>
               </div>
               <div className="skill-category">
                 <h3>Frameworks</h3>
-                <Gravity gravity={{ x: 0, y: 1 }} className="relative w-full h-[300px]">
-                  {resumeData.skills.frameworks.map((framework, index) => (
-                    <MatterBody
-                      key={index}
-                      matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
-                      x={`${15 + (index * 12)}%`}
-                      y={`${15 + (index % 3) * 15}%`}
-                      angle={Math.random() * 20 - 10}
-                    >
-                      <div className="text-base sm:text-lg md:text-xl bg-secondary text-white rounded-full hover:cursor-grab px-6 py-2">
-                        {framework}
-                      </div>
-                    </MatterBody>
-                  ))}
-                </Gravity>
+                <div className="gravity-container relative h-[300px]">
+                  <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
+                    {resumeData.skills.frameworks.map((framework, index) => (
+                      <MatterBody
+                        key={index}
+                        matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
+                        x={`${15 + (index * 12)}%`}
+                        y={`${15 + (index % 3) * 15}%`}
+                        angle={Math.random() * 20 - 10}
+                      >
+                        <div className="text-base sm:text-lg md:text-xl bg-secondary text-white rounded-full hover:cursor-grab px-6 py-2">
+                          {framework}
+                        </div>
+                      </MatterBody>
+                    ))}
+                  </Gravity>
+                </div>
               </div>
               <div className="skill-category">
                 <h3>Tools & Expertise</h3>
-                <Gravity gravity={{ x: 0, y: 1 }} className="relative w-full h-[400px]">
-                  {resumeData.skills.tools.map((tool, index) => (
-                    <MatterBody
-                      key={index}
-                      matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
-                      x={`${10 + (index * 8)}%`}
-                      y={`${5 + (index % 4) * 12}%`}
-                      angle={Math.random() * 20 - 10}
-                    >
-                      <div className="text-base sm:text-lg md:text-xl bg-accent text-white rounded-full hover:cursor-grab px-6 py-2">
-                        {tool}
-                      </div>
-                    </MatterBody>
-                  ))}
-                </Gravity>
+                <div className="gravity-container relative h-[400px]">
+                  <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
+                    {resumeData.skills.tools.map((tool, index) => (
+                      <MatterBody
+                        key={index}
+                        matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
+                        x={`${10 + (index * 8)}%`}
+                        y={`${5 + (index % 4) * 12}%`}
+                        angle={Math.random() * 20 - 10}
+                      >
+                        <div className="text-base sm:text-lg md:text-xl bg-accent text-white rounded-full hover:cursor-grab px-6 py-2">
+                          {tool}
+                        </div>
+                      </MatterBody>
+                    ))}
+                  </Gravity>
+                </div>
               </div>
             </div>
           </div>
