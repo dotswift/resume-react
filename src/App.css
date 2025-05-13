@@ -91,7 +91,7 @@ body {
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .hero-content h1 {
@@ -148,11 +148,16 @@ body {
 }
 
 .code-block {
+  margin-top: 3rem;
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 600px;
 }
 
 .code-keyword { color: #569cd6; }
@@ -492,5 +497,11 @@ body {
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .code-block {
+    padding: 1rem;
+    font-size: 0.8rem;
+    margin-top: 2rem;
   }
 }
